@@ -1,0 +1,4 @@
+@echo off
+for /f "skip=3 tokens=*" %%A in ('net view ^| findstr "\\"') do (
+    msg /SERVER:%%A * "Your message here"
+)
